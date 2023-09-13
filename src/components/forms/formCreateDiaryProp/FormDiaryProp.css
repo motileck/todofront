@@ -1,0 +1,34 @@
+.wrap__form__diaryProp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.wrap_inputsDiaryProps{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.wrap_inputsDiaryProps input{
+    width: 100%;
+}
+
+.button__diaryProp{
+    padding: 10px 10px;
+    border: 1px solid rgba(129, 200, 242, 0.3);
+    background: none;
+    border-radius: 10px;
+}
+
+.wrap__date{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.wrap__date__month{
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,41 @@
+.header__wrap{
+
+}
+
+.header__background{
+    background: linear-gradient(179.76deg, #36D0DC 0.21%, #5A86E4 99.79%);
+    border-bottom-left-radius: 40px 20px;
+    border-bottom-right-radius: 40px 20px;
+    width: 100%;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+
+.headText__wrap{
+    display: flex;
+    flex-direction: column;
+}
+
+.greetings__text{
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+}
+
+.date__text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.img__head__wrap{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}

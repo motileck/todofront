@@ -1,0 +1,24 @@
+.wrap__diaryComponents{
+    padding: 10px 5px;
+    overflow-y: auto;
+}
+
+
+.wrap__diaryValue{
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #000000;
+    padding: 10px 5px;
+    gap: 20px;
+    align-items: center;
+}
+
+.wrap__date{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.wrap__date__month{
+    display: flex;
+    flex-direction: column;
+}

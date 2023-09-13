@@ -1,0 +1,4 @@
+.wrap__auth{
+    display: flex;
+    flex-direction: column;
+}

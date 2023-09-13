@@ -1,0 +1,9 @@
+{
+  "home": "/home",
+  "login": "/login",
+  "register": "/register",
+  "diary": "/diary",
+  "createPropDiary": "/createPropDiary",
+  "createDiary": "/createDiary",
+  "diariesProp": "/diariesProp"
+}

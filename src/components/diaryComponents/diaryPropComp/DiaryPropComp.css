@@ -1,0 +1,14 @@
+.wrap__diaryComponentsProp{
+    padding: 10px 5px;
+    overflow-y: auto;
+}
+
+
+.wrap__diaryValueProp{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #000000;
+    padding: 10px 5px;
+    gap: 20px;
+}

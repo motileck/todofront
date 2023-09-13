@@ -1,0 +1,21 @@
+import React from 'react';
+import routes from './routes.json'
+import Home from "../../pages/home/Home";
+import Login from "../../pages/login/Login";
+import Registration from "../../pages/registration/Registration";
+import FormCreateDiaryProp from "../../components/forms/formCreateDiaryProp/FormDiaryProp";
+import Diary from "../../pages/diary/Diary";
+import FormCreateDiary from "../../components/forms/fromCreateDiary/FormDiary";
+import DiaryPropView from "../../components/diaryComponents/diaryPropView/DiaryPropView";
+
+const RoutersMap =  {
+    [routes.home]: <Home/>,
+    [routes.login]: <Login/>,
+    [routes.register]: <Registration/>,
+    [routes.diary]: <Diary/>,
+    [routes.diariesProp]: <DiaryPropView/>,
+    [routes.createPropDiary]: <FormCreateDiaryProp/>,
+    [routes.createDiary]: <FormCreateDiary/>
+    };
+
+export default RoutersMap;

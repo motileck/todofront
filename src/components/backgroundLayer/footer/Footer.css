@@ -1,0 +1,26 @@
+.footer__wrap{
+    position: fixed;
+    bottom: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    border-top: 1px solid #000000;
+}
+
+.img__wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icons{
+    width: 34px;
+    height: 34px;
+}
+
+
+

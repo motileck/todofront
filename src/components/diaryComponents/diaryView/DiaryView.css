@@ -1,0 +1,14 @@
+.wrap__diary__view{
+    padding-top: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button__createDiary{
+    padding: 10px 10px;
+    border: 1px solid rgba(129, 200, 242, 0.3);
+    background: none;
+    border-radius: 10px;
+}
