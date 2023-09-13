@@ -9,10 +9,12 @@ import DiaryComp from "../diaryComp/DiaryComp";
 import {getAllDiaries} from "../../../store/diary/actions";
 import {setDiaryId} from "../../../store/takeId/takeIdSlice";
 import {IItemDiary} from "../../../models/IItemDiary";
+import Loader from "../../loader/Loader";
 
 interface StateData {
     diarySlice: {
-        data: []
+        data: [],
+        status:string
     }
 }
 
@@ -22,11 +24,11 @@ const DiaryView = () => {
     const dispatch = useAppDispatch();
     const userId = useUserId();
     const dataD = useSelector((state: StateData) => state.diarySlice.data);
+    const status = useSelector((state:StateData) => state.diarySlice.status);
     let diaryId;
     const takeDiaryId = (item : IItemDiary) => {
         diaryId = item._id
         dispatch((setDiaryId(diaryId)));
-        console.log(diaryId)
         navigate(routes.diariesProp);
     }
 
@@ -44,8 +46,10 @@ const DiaryView = () => {
             </button>
 
             <div className='wrap__diaryComp' style={{paddingBottom: '80px'}}>
-
-                {dataD.map((item: IItemDiary, index: number) => (
+                {status === "loading" &&
+                    <Loader/>
+                    }
+                {status === "success" && dataD.map((item: IItemDiary, index: number) => (
                     <div key={index} onClick={() => takeDiaryId(item)}>
                         <DiaryComp key={index} item={item} index={index}/>
                     </div>

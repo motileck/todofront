@@ -1,0 +1,23 @@
+.wrap__dataUser{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.wrap__buttons__profile{
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.button__profile{
+    background: #81C8F2;
+    border-radius: 10px;
+    border: none;
+    color: #ffffff;
+    padding: 10px 20px;
+}

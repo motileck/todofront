@@ -7,6 +7,9 @@ import FormCreateDiaryProp from "../../components/forms/formCreateDiaryProp/Form
 import Diary from "../../pages/diary/Diary";
 import FormCreateDiary from "../../components/forms/fromCreateDiary/FormDiary";
 import DiaryPropView from "../../components/diaryComponents/diaryPropView/DiaryPropView";
+import Profile from "../../pages/profile/Profile";
+import Analysis from "../../pages/analysis/Analysis";
+import Table from "../../components/analysisComponents/Table";
 
 const RoutersMap =  {
     [routes.home]: <Home/>,
@@ -15,7 +18,10 @@ const RoutersMap =  {
     [routes.diary]: <Diary/>,
     [routes.diariesProp]: <DiaryPropView/>,
     [routes.createPropDiary]: <FormCreateDiaryProp/>,
-    [routes.createDiary]: <FormCreateDiary/>
+    [routes.createDiary]: <FormCreateDiary/>,
+    [routes.profile]: <Profile/>,
+    [routes.analysis]: <Analysis/>,
+    [routes.createTable]: <Table/>
     };
 
 export default RoutersMap;

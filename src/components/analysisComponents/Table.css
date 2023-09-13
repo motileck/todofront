@@ -1,0 +1,13 @@
+.wrap__analysis{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.wrap__input__analysis{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

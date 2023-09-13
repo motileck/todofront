@@ -9,9 +9,12 @@ import {getAllDiariesProp} from "../../../store/diaryProp/actions";
 import DiariesPropService from "../../../services/DiariesPropService";
 import {IItemDiaryProp} from "../../../models/IItemDiary";
 import DiaryService from "../../../services/DiaryService";
+import {BeatLoader} from "react-spinners";
+import Loader from "../../loader/Loader";
 interface StateData {
     diaryPropSlice: {
-        data: []
+        data: [],
+        status: string,
     }
 }
 
@@ -24,8 +27,9 @@ interface StateDiaryId {
 const DiaryPropView = () => {
     const navigate = useNavigate();
     const dispatch = useAppDispatch();
-    const dataDiaryProp = useSelector((state: StateData) => state.diaryPropSlice.data)
-    const diaryId = useSelector((state:StateDiaryId) => state.takeIdSlice.diaryId)
+    const dataDiaryProp = useSelector((state: StateData) => state.diaryPropSlice.data);
+    const diaryId = useSelector((state:StateDiaryId) => state.takeIdSlice.diaryId);
+    const status = useSelector((state:StateData) => state.diaryPropSlice.status);
     useEffect(() => {
         if (diaryId) {
             dispatch(getAllDiariesProp({diaryId: diaryId}))
@@ -33,7 +37,6 @@ const DiaryPropView = () => {
     }, [diaryId])
 
     const deleteProp = async (item : IItemDiaryProp) => {
-        console.log(typeof item._id);
         await DiariesPropService.deletePropDiary(item._id);
         dispatch(getAllDiariesProp({diaryId: diaryId}));
     }
@@ -56,9 +59,12 @@ const DiaryPropView = () => {
                 </button>
             </div>
 
-            <div>
-                {dataDiaryProp.map((item: IItemDiaryProp, index: number) => (
-                    <div key={index}>
+            <div className="wrap__diaryProp__view">
+                {status === "loading" &&
+                    <Loader/>
+                }
+                {status === "success" && dataDiaryProp.map((item: IItemDiaryProp, index: number) => (
+                    <div  key={index}>
                         <button className='button__diary__prop' onClick={()=> deleteProp(item)}>
                             <span>Delete</span>
                         </button>

@@ -7,7 +7,7 @@ const Header = () => {
     const userName = useUserName();
     const currentDate = useDate();
     return (
-        <div className='header__wrap'>
+        <header className='header__wrap'>
             <div className='header__background'>
                 <div className='headText__wrap'>
                     <span className='greetings__text'>Good Day, {userName}!</span>
@@ -18,7 +18,7 @@ const Header = () => {
                     <img alt='profile' src={headerImg.logoProfile}/>
                 </div>
             </div>
-        </div>
+        </header>
     );
 };
 
